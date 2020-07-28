@@ -1,6 +1,6 @@
 public abstract class Figure {
 
-    public abstract String toString();
+    private Color color;
 
     public abstract double getArea();
 

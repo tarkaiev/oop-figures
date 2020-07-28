@@ -21,13 +21,13 @@ public class Main {
             case (1) :
                 return new Square(randomSize(),randomColor());
             case (2) : {
-                int sideA = randomSize() + 1;
-                int sideB = sideA + 1;
-                int sideC = sideB + 1;
+                int sideA = randomSize();
+                int sideB = randomSize();
+                int sideC;
+                do {
+                    sideC = randomSize();
+                } while (sideC >= sideA + sideB);
                 return new Triangle(sideA, sideB, sideC,randomColor()); }
-                //в треугольнике обходится ограничение,
-                // что 2 стороны в сумме должны всегда быть больше третьей
-                //криво, но как сделать лучше не придумал
             case(3) :
                 return new Circle(randomSize(),randomColor());
             case(4) :
