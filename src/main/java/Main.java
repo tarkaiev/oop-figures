@@ -19,19 +19,23 @@ public class Main {
         int randomizer = 1 + (int) (Math.random() * 4);
         switch (randomizer) {
             case (1) :
-                return new Square(randomSize(),randomColor());
+                return new Square(randomSize(), randomColor());
             case (2) : {
-                int sideA = randomSize();
-                int sideB = randomSize();
+                int sideA;
+                int sideB;
                 int sideC;
                 do {
+                    sideA = randomSize();
+                    sideB = randomSize();
                     sideC = randomSize();
-                } while (sideC >= sideA + sideB);
-                return new Triangle(sideA, sideB, sideC,randomColor()); }
+                } while ((sideA > sideB + sideC) | (sideB > sideA + sideC)
+                    | (sideC > sideA + sideB));
+
+                return new Triangle(sideA, sideB, sideC, randomColor()); }
             case(3) :
-                return new Circle(randomSize(),randomColor());
+                return new Circle(randomSize(), randomColor());
             case(4) :
-                return new Trapezoid(randomSize(),randomSize(),randomSize(),randomColor());
+                return new Trapezoid(randomSize(), randomSize(), randomSize(), randomColor());
             default :
                 return null;
         }
