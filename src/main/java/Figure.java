@@ -6,5 +6,4 @@ public abstract class Figure {
 
     public abstract Color getColor();
 
-
 }
