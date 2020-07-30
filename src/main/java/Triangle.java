@@ -22,8 +22,10 @@ public class Triangle extends Figure {
     }
 
     public double getArea() {
-        double p = ((double)sideA + (double)sideB + (double)sideC) / 2;
-        return Math.sqrt(p * (p - (double)sideA) * (p - (double)sideB) * (p - (double)sideC));
+        double halfPerimeter = ((double)sideA + (double)sideB + (double)sideC) / 2;
+        return Math.sqrt(halfPerimeter * (halfPerimeter - (double)sideA)
+                * (halfPerimeter - (double)sideB)
+                * (halfPerimeter - (double)sideC));
     }
 
     public Color getColor() {

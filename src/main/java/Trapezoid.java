@@ -22,9 +22,10 @@ public class Trapezoid extends Figure {
     }
 
     public double getArea() {
-        double p = ((double)sideA + (double)sideB + 2 * (double)sideC) / 2;
-        return Math.sqrt((p - (double)sideA)
-                * (p - (double)sideB) * Math.pow((p - (double)sideC),2));
+        double halfPerimeter = ((double)sideA + (double)sideB + 2 * (double)sideC) / 2;
+        return Math.sqrt((halfPerimeter - (double)sideA)
+                * (halfPerimeter - (double)sideB)
+                * Math.pow((halfPerimeter - (double)sideC),2));
     }
 
     public Color getColor() {

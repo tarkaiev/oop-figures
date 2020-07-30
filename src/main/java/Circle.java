@@ -16,7 +16,7 @@ public class Circle extends Figure {
     }
 
     public double getArea() {
-        return Math.pow((Math.PI * radius), 2);
+        return Math.pow(radius, 2) * Math.PI;
     }
 
     public Color getColor() {

@@ -1,8 +1,10 @@
 public class Main {
+    private static final int MAX_SIZE = 10;
+    private static final int MAX_COLOR_ID = 5;
+
     public static void main(String[] args) {
-        Figure[] figures = new Figure[1 + (int) (Math.random() * 10)];
-        //массив, содержащий от 1 до 10 фигур
-        for (int i = 0;i < figures.length;i++) {
+        Figure[] figures = new Figure[1 + (int) (Math.random() * MAX_SIZE)];
+        for (int i = 0; i < figures.length; i++) {
             figures[i] = randomFigure();
         }
         for (Figure figure : figures) {
@@ -10,12 +12,11 @@ public class Main {
         }
     }
 
-    public static int randomSize() {
-        return 1 + (int) (Math.random() * 10); // делаю рандомный размер от 1 до 10
+    private static int randomSize() {
+        return 1 + (int) (Math.random() * MAX_SIZE);
     }
-    //генерирую рандомную фигуру
 
-    public static Figure randomFigure() {
+    private static Figure randomFigure() {
         int randomizer = 1 + (int) (Math.random() * 4);
         switch (randomizer) {
             case (1) :
@@ -40,10 +41,9 @@ public class Main {
                 return null;
         }
     }
-    // метод устанавливает рандомный цвет. понимаю, что выглядит криво, но работает
 
-    public static Color randomColor() {
-        int randomizer = 1 + (int) (Math.random() * 5);
+    private static Color randomColor() {
+        int randomizer = 1 + (int) (Math.random() * MAX_COLOR_ID);
         switch (randomizer) {
             case (1):
                 return Color.White;
