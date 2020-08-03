@@ -2,13 +2,13 @@ public class Triangle extends Figure {
     private int sideA;
     private int sideB;
     private int sideC;
-    private Color color;
 
     public Triangle(int sideA,int sideB, int sideC, Color color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
-        this.color = color;
+
     }
 
     public String toString() {
@@ -29,7 +29,7 @@ public class Triangle extends Figure {
     }
 
     public Color getColor() {
-        return color;
+        return super.color;
     }
 
     public int getSideSum() {

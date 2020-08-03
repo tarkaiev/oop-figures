@@ -1,10 +1,9 @@
 public class Circle extends Figure {
     private int radius;
-    private Color color;
 
     public Circle(int radius, Color color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     public String toString() {
@@ -20,7 +19,7 @@ public class Circle extends Figure {
     }
 
     public Color getColor() {
-        return color;
+        return super.color;
     }
 
     public double getPerimeter() {

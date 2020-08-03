@@ -1,11 +1,10 @@
 public class Square extends Figure {
 
     private int side;
-    private Color color;
 
     public Square(int side, Color color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     public String toString() {
@@ -21,6 +20,6 @@ public class Square extends Figure {
     }
 
     public Color getColor() {
-        return color;
+        return super.color;
     }
 }
